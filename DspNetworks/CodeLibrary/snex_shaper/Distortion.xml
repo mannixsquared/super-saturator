@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Parameters>
+  <Parameter MinValue="1.0" MaxValue="10.0" StepSize="0.0" SkewFactor="1.0"
+             ID="Drive" Value="0.0"/>
+</Parameters>

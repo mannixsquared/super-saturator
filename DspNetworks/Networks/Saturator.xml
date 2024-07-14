@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Network ID="Saturator" Version="0.0.0">
+  <Node FactoryPath="container.chain" ID="Saturator" Bypassed="0" ShowParameters="1">
+    <Nodes>
+      <Node ID="WaveShaper" FactoryPath="project.WaveShaper" Bypassed="0">
+        <Parameters>
+          <Parameter MinValue="20.0" MaxValue="20000.0" SkewFactor="0.2299045622348785"
+                     ID="Frequency" Automated="1"/>
+          <Parameter MinValue="1.0" MaxValue="10.0" ID="Drive" Automated="1"/>
+        </Parameters>
+      </Node>
+      <Node ID="gain" FactoryPath="core.gain" Bypassed="0">
+        <Parameters>
+          <Parameter MinValue="0.0" MaxValue="-6.0" StepSize="0.01" SkewFactor="1"
+                     ID="Gain" Automated="1"/>
+          <Parameter MinValue="0.0" MaxValue="1000.0" StepSize="0.1000000014901161"
+                     SkewFactor="0.3010300099849701" ID="Smoothing" Value="0.0"/>
+          <Parameter MinValue="-100.0" MaxValue="0.0" StepSize="0.1000000014901161"
+                     SkewFactor="5.422270774841309" ID="ResetValue" Value="0.0"/>
+        </Parameters>
+      </Node>
+    </Nodes>
+    <Parameters>
+      <Parameter ID="Frequency" MinValue="20.0" MaxValue="20000.0" SkewFactor="0.2299045622348785"
+                 Value="2956.030741999489">
+        <Connections>
+          <Connection NodeId="WaveShaper" ParameterId="Frequency"/>
+        </Connections>
+      </Parameter>
+      <Parameter ID="Drive" MinValue="1.0" MaxValue="10.0" Value="2.510875">
+        <Connections>
+          <Connection NodeId="WaveShaper" ParameterId="Drive"/>
+          <Connection NodeId="gain" ParameterId="Gain"/>
+        </Connections>
+      </Parameter>
+    </Parameters>
+  </Node>
+</Network>
