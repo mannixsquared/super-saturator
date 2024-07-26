@@ -18,32 +18,51 @@
              height="128.0" numStrips="63.0" width="128.0" processorId="Saturator"
              parameterId="Drive" defaultValue="1.0" min="1.0" max="10.0" middlePosition="5.0"
              isPluginParameter="1" pluginParameterName="Drive"/>
-  <Component type="ScriptFloatingTile" id="FloatingTile1" x="30.0" y="100.0"
+  <Component type="ScriptFloatingTile" id="FloatingTile1" x="30.0" y="140.0"
              ContentType="MatrixPeakMeter" bgColour="4278190080" itemColour="4283782485"
              itemColour2="4280427042" Data="{&#10;  &quot;ProcessorId&quot;: &quot;Input&quot;,&#10;  &quot;Index&quot;: 0,&#10;  &quot;FollowWorkspace&quot;: false,&#10;  &quot;SegmentLedSize&quot;: 1.0,&#10;  &quot;UpDecayTime&quot;: 0.0,&#10;  &quot;DownDecayTime&quot;: 0.0,&#10;  &quot;UseSourceChannels&quot;: true,&#10;  &quot;SkewFactor&quot;: 1.0,&#10;  &quot;PaddingSize&quot;: 1.0,&#10;  &quot;ShowMaxPeak&quot;: 1.0,&#10;  &quot;ChannelIndexes&quot;: [&#10;    0,&#10;    1&#10;  ]&#10;}"
-             width="40.0" height="220.0"/>
+             width="40" height="190"/>
   <Component type="ScriptSlider" id="Frequency" x="169.0" y="266.0" processorId="Saturator"
              parameterId="Frequency" isPluginParameter="1" pluginParameterName="Frequency"
              min="50.0" max="2000.0" defaultValue="150.0" filmstripImage="{PROJECT_FOLDER}knob.png"
              numStrips="63.0" width="64.0" height="64.0" middlePosition="150.0"
              scaleFactor="0.5"/>
-  <Component type="ScriptFloatingTile" id="FloatingTile2" x="331.0" y="100.0"
+  <Component type="ScriptFloatingTile" id="FloatingTile2" x="331.0" y="140.0"
              ContentType="MatrixPeakMeter" bgColour="4278190080" itemColour="4283782485"
              itemColour2="4280427042" Data="{&#10;  &quot;ProcessorId&quot;: &quot;Output&quot;,&#10;  &quot;Index&quot;: 0,&#10;  &quot;FollowWorkspace&quot;: false,&#10;  &quot;SegmentLedSize&quot;: 1.0,&#10;  &quot;UpDecayTime&quot;: 0.0,&#10;  &quot;DownDecayTime&quot;: 0.0,&#10;  &quot;UseSourceChannels&quot;: true,&#10;  &quot;SkewFactor&quot;: 1.0,&#10;  &quot;PaddingSize&quot;: 1.0,&#10;  &quot;ShowMaxPeak&quot;: 1.0,&#10;  &quot;ChannelIndexes&quot;: [&#10;    0,&#10;    1&#10;  ]&#10;}"
-             width="40.0" height="220.0"/>
+             width="40" height="190"/>
   <Component type="ScriptLabel" id="Label3" x="320.0" y="14.0" text="V1.0"
              alignment="right" width="70.0" height="30.0" fontStyle="Bold"
              fontName="Avenir Next" fontSize="16.0" textColour="4280339679"
-             itemColour2="0" editable="0"/>
+             itemColour2="0"/>
   <Component type="ScriptLabel" id="Label4" x="262.0" y="35.0" text="&#169; Mannix&#178; 2024"
              fontName="Avenir Next" alignment="right" fontSize="16.0" itemColour2="0"
-             textColour="4294964705"/>
+             textColour="4294964705" editable="0"/>
   <Component type="ScriptLabel" id="Label5" x="133.0" y="310.0" fontName="Avenir Next"
-             text="50Hz" width="40.0" height="20.0" alignment="right" textColour="4294964705"/>
+             text="50Hz" width="40.0" height="20.0" alignment="right" textColour="4294964705"
+             editable="0"/>
   <Component type="ScriptLabel" id="Label6" x="230.0" y="310.0" fontName="Avenir Next"
-             text="2,000Hz" width="40.0" height="20.0" alignment="left" textColour="4294964705"/>
-  <Component type="ScriptLabel" id="Label7" x="30.0" y="330.0" fontName="Avenir Next"
-             text="IN" width="40.0" height="20.0" textColour="4294964705"/>
-  <Component type="ScriptLabel" id="Label8" x="330.0" y="330.0" fontName="Avenir Next"
-             text="OUT" width="40.0" height="20.0" textColour="4294964705"/>
+             text="2,000Hz" width="40.0" height="20.0" alignment="left" textColour="4294964705"
+             editable="0"/>
+  <Component type="ScriptLabel" id="Label7" x="30.0" y="335.0" fontName="Avenir Next"
+             text="IN" width="40.0" height="20.0" textColour="4294964705"
+             editable="0"/>
+  <Component type="ScriptLabel" id="Label8" x="330.0" y="335.0" fontName="Avenir Next"
+             text="OUT" width="40.0" height="20.0" textColour="4294964705"
+             editable="0"/>
+  <Component type="ScriptSlider" id="Knob1" x="334.0" y="80.0" filmstripImage="{PROJECT_FOLDER}subtle_knob.png"
+             numStrips="64" scaleFactor="0.5" mouseSensitivity="0.5" width="32.0"
+             height="32.0" mode="Decibel" min="-100.0" max="0.0" stepSize="0.1"
+             suffix=" dB" middlePosition="-18.0" processorId="Simple Gain1"
+             parameterId="Gain"/>
+  <Component type="ScriptLabel" id="Label9" x="330.0" y="113.0" fontName="Avenir Next"
+             text="TRIM" width="40.0" height="20.0" textColour="4294964705"
+             editable="0"/>
+  <Component type="ScriptLabel" id="Label10" x="30.0" y="113.0" fontName="Avenir Next"
+             text="MIX" width="40.0" height="20.0" textColour="4294964705"
+             editable="0"/>
+  <Component type="ScriptSlider" id="Knob2" x="35.0" y="80.0" filmstripImage="{PROJECT_FOLDER}subtle_knob.png"
+             numStrips="64" scaleFactor="0.5" mouseSensitivity="0.5" width="32.0"
+             height="32.0" mode="NormalizedPercentage" suffix="%" middlePosition="0.5"
+             processorId="Saturator" parameterId="Mix" defaultValue="1.0"/>
 </ContentProperties>

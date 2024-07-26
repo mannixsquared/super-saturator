@@ -9,8 +9,10 @@
         <Processor Type="ScriptProcessor" ID="Interface" Bypassed="0">
           <ChildProcessors/>
           <Content>
-            <Control type="ScriptSlider" id="Drive" value="2.5"/>
-            <Control type="ScriptSlider" id="Frequency" value="393.8299865722656"/>
+            <Control type="ScriptSlider" id="Drive" value="1.0"/>
+            <Control type="ScriptSlider" id="Frequency" value="150.0"/>
+            <Control type="ScriptSlider" id="Knob1" value="0.0"/>
+            <Control type="ScriptSlider" id="Knob2" value="1.0"/>
           </Content>
           <UIData Source="super-saturatorUIData"/>
         </Processor>
@@ -43,9 +45,27 @@
           <ChildProcessors/>
           <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
         </Processor>
+        <Processor Type="SimpleGain" ID="Simple Gain1" Bypassed="0" Gain="0.0" Delay="0.0"
+                   Width="100.0" Balance="0.0" InvertPolarity="0.0">
+          <ChildProcessors>
+            <Processor Type="ModulatorChain" ID="Gain Modulation" Bypassed="0" Intensity="1.0">
+              <ChildProcessors/>
+            </Processor>
+            <Processor Type="ModulatorChain" ID="Delay Modulation" Bypassed="0" Intensity="1.0">
+              <ChildProcessors/>
+            </Processor>
+            <Processor Type="ModulatorChain" ID="Width Modulation" Bypassed="0" Intensity="1.0">
+              <ChildProcessors/>
+            </Processor>
+            <Processor Type="ModulatorChain" ID="Pan Modulation" Bypassed="0" Intensity="1.0">
+              <ChildProcessors/>
+            </Processor>
+          </ChildProcessors>
+          <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
+        </Processor>
       </ChildProcessors>
     </Processor>
-    <Processor Type="AudioLooper" ID="Audio Loop Player1" Bypassed="0" Gain="0.25"
+    <Processor Type="AudioLooper" ID="Audio Loop Player1" Bypassed="0" Gain="0.2511886358261108"
                Balance="0.0" VoiceLimit="256.0" KillFadeTime="20.0" IconColour="0"
                SyncMode="1.0" PitchTracking="0.0" LoopEnabled="0.0" RootNote="64.0"
                SampleStartMod="0.0" Reversed="0.0" FileName="/Users/johnmannix/Library/Mobile Documents/com~apple~CloudDocs/Music/Guitar Riff.wav"
